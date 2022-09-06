@@ -1,0 +1,109 @@
+A. SQL TEST
+    
+    USER
+            userid          age
+            Wildan          27
+            Zaki            25
+
+
+    ASSET   
+            item            user_id
+            notebook        Wildan
+            bag             Wildan
+            notebook        Zaki
+            bag             Zaki    
+            Mobile Phone    Zaki                        
+
+
+SELECT item FROM Asset;
+
+SELECT item,user_id FROM Asset;
+
+
+
+
+
+Logic TEST
+
+ 1. Buatlah fungsi yang dapat menghasilkan output seperti dibawah ini :
+input n = 5 
+1**45678 
+12**5678 
+123**678 
+1234**78 
+12345**8
+
+input n = 4 
+1**4567 
+12**567 
+123**67
+1234**7
+
+Jika Diperatikan Dari Soal Diatas
+Setiap baris selalu memiliki **
+Jumlah angka pada tiap baris selalu n + 3.
+Simbol ** selalu keluar setelah angka baris. Maksudnya, pada baris 3, setelah angka 3 mucul baru **.
+def simple_function(n):
+    for i in range(1, n + 1):
+        j = 1
+        while j <= n + 3:
+            print(j, end='')
+            if i == j:
+                print("**", end='')
+                j += 2
+            j += 1
+        print("")
+n = int(input("input n: "))
+simple_function(n)
+
+2.
+  Carilah nilai selisih paling besar pada sebuah array, tetapi penghitungan
+ nilai selisihnya harus dari kiri ke kanan.
+harga = [10, 7, 5, 8, 11, 9, 1] selisih(harga)
+# returns 6 (5 dan 11)
+
+
+
+#solusi ke 1 Pakai  Method Max Min Pakai Java
+
+public class HelloWorld {
+   public static void main(String[] args) {
+      int harga[] = new int[]{10, 7, 5, 8, 11, 9, 1};
+      int s = harga[0];
+      int l = harga[0];
+      
+      for(int i = 1; i < numbers.length; i++) {
+         if(harga[i] > l)l = harga[i];
+         else if (harga[i] < s)s = harga[i];
+      } 
+      System.out.println("harga Tertinggi adalah : " + l);
+      System.out.println("harga Terrendah adalah : " + s);
+   }
+}
+
+#solusi ke 2 largest Diffrence Pakai C#
+
+public int solution(int[] A)
+{
+    int N = A.Length;
+    if (N < 1) return 0;
+
+    int max = 0;
+    int result = 0;
+
+    for(int i = N-1; i >= 0; --i)
+    {
+        if(A[i] > max)
+            max = A[i];
+
+        var tmpResult = max - A[i];        
+        if(tmpResult > result)
+            result = tmpResult;
+    }
+
+    return result;
+}
+
+
+
+
